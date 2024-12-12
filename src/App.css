@@ -1,0 +1,17 @@
+@keyframes slide-down {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translateX(3rem);
+  }
+}
+
+img.activate {
+  animation: slide-down 1s infinite;
+}
+
+/* body {
+  background-color: red;
+} */
