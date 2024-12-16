@@ -8,10 +8,6 @@
   }
 }
 
-img.activate {
-  animation: slide-down 1s infinite;
+.character {
+  transition: all 1s;
 }
-
-/* body {
-  background-color: red;
-} */
