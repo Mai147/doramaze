@@ -11,7 +11,10 @@ function App() {
   const [openFinishModal, setOpenFinishModal] = useState(false);
   const [finishType, setFinishType] = useState<FinishState | null>(null);
   return (
-    <div className="relative flex flex-col justify-center bg-[url('images/background2.png')] h-[100vh] bg-cover">
+    <div
+      className="relative flex flex-col justify-center h-[100vh] bg-cover"
+      style={{ backgroundImage: "url('images/background2.png')" }}
+    >
       {!start && (
         <StartModal
           handleStart={() => {
