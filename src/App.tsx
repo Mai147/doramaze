@@ -1,36 +1,48 @@
+import { useState } from "react";
 import "./App.css";
-import Cell from "./components/Cell";
-
-// Ví dụ bàn cờ: 0 là ô trống, 1 là ô bị chướng ngại vật
-const board = [
-  [0, 0, 0, 0, 0, 0, 0, 0],
-  [1, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 1, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 1, 0, 0],
-  [0, 0, 0, 0, 0, 0, 1, 0],
-  [0, 0, 0, 0, 0, 0, 0, 1],
-  [0, 0, 0, 0, 0, 0, 1, 0],
-  [0, 0, 0, 0, 0, 0, 1, 0],
-];
-
-// Kiểm tra có thể di chuyển từ a1 đến h8 không
-// const result = bfs(board);
-// if (result) {
-//   console.log("Có đường đi từ a1 đến h8.");
-// } else {
-//   console.log("Không có đường đi từ a1 đến h8.");
-// }
+import Board from "./components/Board";
+import { FinishState } from "./types";
+import FinishModal from "./components/FinishModal";
+import { BOARD, END_POSITION } from "./configs/board";
+import StartModal from "./components/StartModal";
 
 function App() {
+  const [start, setStart] = useState(false);
+  const [openFinishModal, setOpenFinishModal] = useState(false);
+  const [finishType, setFinishType] = useState<FinishState | null>(null);
   return (
-    <div className="flex flex-col">
-      {board.map((row, rowIdx) => (
-        <div className="flex items-center justify-center text-center">
-          {row.map((cell, colIdx) => (
-            <Cell row={rowIdx} col={colIdx} isVisited={cell === 1} />
-          ))}
-        </div>
-      ))}
+    <div className="relative flex flex-col justify-center bg-[url('images/background2.png')] h-[100vh] bg-cover">
+      {!start && (
+        <StartModal
+          handleStart={() => {
+            setStart(true);
+          }}
+        />
+      )}
+      {start && (
+        <>
+          <div className="flex justify-center h-40 items-center absolute top-0 left-1/2 -translate-x-1/2">
+            <img width={400} src="images/logo.png" alt="logo" />
+          </div>
+          <Board
+            initBoard={BOARD}
+            endPosition={END_POSITION}
+            onFinish={(type) => {
+              setFinishType(type);
+              setOpenFinishModal(true);
+            }}
+          />
+          <FinishModal
+            type={finishType}
+            isOpen={openFinishModal}
+            onRestart={() => {
+              setFinishType(null);
+              setOpenFinishModal(false);
+              setStart(false);
+            }}
+          />
+        </>
+      )}
     </div>
   );
 }
