@@ -171,8 +171,6 @@ const Board: React.FC<BoardProps> = ({ initBoard, onFinish, endPosition }) => {
             {row.map((cell, colIdx) => (
               <Cell
                 key={`${rowIdx}${colIdx}`}
-                row={rowIdx}
-                col={colIdx}
                 cellState={cell}
                 isQuestionOpen={
                   selectedQuestionCord?.row === rowIdx &&

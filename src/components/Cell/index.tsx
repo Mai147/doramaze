@@ -3,8 +3,6 @@ import { Answer, AnswerKeyValue, CellState } from "../../types";
 import QuestionModal from "../Question/QuestionModal";
 
 type CellProps = {
-  row: number;
-  col: number;
   cellState: CellState;
   isQuestionOpen?: boolean;
   isEndPosition?: boolean;
@@ -12,8 +10,6 @@ type CellProps = {
 };
 
 const Cell: React.FC<CellProps> = ({
-  row,
-  col,
   cellState,
   isQuestionOpen,
   handleCloseQuestion,
