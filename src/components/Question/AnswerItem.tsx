@@ -11,6 +11,7 @@ type AnswerItemProps = {
   isCorrect: boolean;
   isShowResult: boolean;
   setIsShowResult: (res: boolean) => void;
+  isEndByCountDown: boolean;
 };
 
 const AnswerItem: React.FC<AnswerItemProps> = ({
@@ -21,6 +22,7 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   isCorrect,
   isShowResult,
   setIsShowResult,
+  isEndByCountDown,
 }) => {
   const [isOpenConfirmModal, setIsOpenConfirmModal] = useState(false);
   const [selected, setSelected] = useState(false);
@@ -34,8 +36,16 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
     const showResult = async () => {
       if (answerRef.current) {
         if (isCorrect) {
-          answerRef.current.style.background = "#399918";
-          answerRef.current.style.color = "#fff";
+          if (isEndByCountDown) {
+            answerRef.current.style.background = "#ECA869";
+            answerRef.current.style.color = "#fff";
+            await Utils.sleep(2000);
+            handleClose(false);
+            return;
+          } else {
+            answerRef.current.style.background = "#399918";
+            answerRef.current.style.color = "#fff";
+          }
         } else if (selected) {
           answerRef.current.style.background = "#FF7777";
           answerRef.current.style.color = "#fff";

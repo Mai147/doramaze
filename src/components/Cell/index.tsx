@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Answer, AnswerKeyValue, CellState } from "../../types";
+import { Answer, CellState } from "../../types";
 import QuestionModal from "../Question/QuestionModal";
+import { Question } from "../../datas/question";
 
 type CellProps = {
   cellState: CellState;
   isQuestionOpen?: boolean;
   isEndPosition?: boolean;
   handleCloseQuestion: (isCorrect: boolean) => void;
+  question?: Question;
 };
 
 const Cell: React.FC<CellProps> = ({
@@ -14,32 +16,10 @@ const Cell: React.FC<CellProps> = ({
   isQuestionOpen,
   handleCloseQuestion,
   isEndPosition = false,
+  question,
 }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<Answer | null>(null);
 
-  const answerList: Answer[] = [
-    {
-      value: AnswerKeyValue.A,
-      content: "日本",
-      key: "A",
-    },
-    {
-      value: AnswerKeyValue.B,
-      content: "にほ",
-      key: "B",
-    },
-    {
-      value: AnswerKeyValue.C,
-      content: "ベトナム",
-      key: "C",
-    },
-    {
-      value: AnswerKeyValue.D,
-      content: "にっぽ",
-      key: "D",
-    },
-  ];
-  const question = "Nhật Bản viết bằng tiếng Nhật là gì?";
   const getCellColor = () => {
     switch (cellState) {
       case CellState.EMPTY:
@@ -61,13 +41,11 @@ const Cell: React.FC<CellProps> = ({
         <img src="images/blocked.png" alt="question" />
       )}
       {isEndPosition && <img width={30} src="images/end.png" alt="doraemon" />}
-      {cellState === CellState.QUESTION && (
+      {cellState === CellState.QUESTION && question && (
         <QuestionModal
           isOpen={isQuestionOpen ?? false}
           onClose={handleCloseQuestion}
           question={question}
-          answerList={answerList}
-          correctAnswer={AnswerKeyValue.A}
           selectedAnswer={selectedAnswer}
           setSelectedAnswer={setSelectedAnswer}
         />

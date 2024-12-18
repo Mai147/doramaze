@@ -9,6 +9,7 @@ import {
   CHARACTER_LEFT,
   CHARACTER_RIGHT,
 } from "../../configs/character";
+import { QuestionData } from "../../datas/question";
 
 type BoardProps = {
   initBoard: CellState[][];
@@ -180,6 +181,11 @@ const Board: React.FC<BoardProps> = ({ initBoard, onFinish, endPosition }) => {
                   rowIdx === endPosition.row && colIdx === endPosition.col
                 }
                 handleCloseQuestion={handleCloseQuestion}
+                question={QuestionData.find(
+                  (question) =>
+                    question.position.row === rowIdx &&
+                    question.position.col === colIdx
+                )}
               />
             ))}
           </div>
