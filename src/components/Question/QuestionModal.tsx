@@ -4,7 +4,7 @@ import ModalContainer from "../Modal/Container";
 import QuestionSection from "./QuestionSection";
 import AnswerSection from "./AnswerSection";
 import { Answer } from "../../types";
-import { Question, QuestionLevel } from "../../datas/question";
+import { Question } from "../../datas/question";
 import Countdown from "./Countdown";
 import { QuestionTime } from "../../configs/question";
 
