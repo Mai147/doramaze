@@ -7,6 +7,7 @@ type ModalContainerProps = {
     closeButton?: React.ReactNode;
     onClose?: () => void;
     className?: string;
+    style?: object;
 };
 
 const ModalContainer: React.FC<ModalContainerProps> = ({
@@ -15,9 +16,13 @@ const ModalContainer: React.FC<ModalContainerProps> = ({
     closeButton,
     onClose,
     className = "",
+    style,
 }) => {
     return (
-        <div className={`bg-white p-2 md:p-4 rounded-md ${className}`}>
+        <div
+            className={`bg-white p-2 md:p-4 rounded-md ${className}`}
+            style={style}
+        >
             {closeButton ? (
                 <>
                     <div
