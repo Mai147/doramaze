@@ -24,9 +24,6 @@ const QuestionModal: React.FC<QuestionModalProps> = ({
   setSelectedAnswer,
 }) => {
   const [isEndByCountDown, setIsEndByCountDown] = useState(false);
-  const getCountDownTime = () => {
-    return QuestionTime[question.level];
-  };
   const handleEndCountDown = () => {
     setIsEndByCountDown(true);
   };
@@ -37,7 +34,10 @@ const QuestionModal: React.FC<QuestionModalProps> = ({
           <img width={60} src="images/front3.gif" alt="nobita" />
         </div>
         <div className="absolute right-4 top-4">
-          <Countdown time={getCountDownTime()} onEnd={handleEndCountDown} />
+          <Countdown
+            time={QuestionTime[question.level]}
+            onEnd={handleEndCountDown}
+          />
         </div>
         <QuestionSection question={question.question} />
         {question.image && (

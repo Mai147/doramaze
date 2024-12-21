@@ -14,6 +14,7 @@ export type Question = {
   question: string;
   answers: Answer[];
   correctAnswer: AnswerKeyValue;
+  explaination?: string;
   level: QuestionLevel;
   position: {
     row: number;
@@ -50,6 +51,14 @@ export const QuestionData: Question[] = [
     correctAnswer: AnswerKeyValue.A,
     level: QuestionLevel.EASY,
     position: QuestionPosition[0],
+    explaination: `
+Nếu con chim cúc cu không hót, hãy giết nó!
+    (Oda Nobunaga)
+Nếu con chim cúc cu không hót, hãy vuốt ve nó!
+    (Toyotomi Hideyoshi)
+Nếu con chim cúc cu không hót, hãy đợi nó!
+    (Tokugawa Ieyasu)
+    `,
   },
   {
     question: "Đây là trang phục gì?",
@@ -108,6 +117,14 @@ export const QuestionData: Question[] = [
     correctAnswer: AnswerKeyValue.A,
     level: QuestionLevel.HARD,
     position: QuestionPosition[2],
+    explaination: `
+    Bốn nguyên tắc cơ bản của trà đạo Nhật Bản là:
+      1. Hòa (和 - Wa): Hài hòa giữa con người với thiên nhiên và xã hội.
+      2. Kính (敬 - Kei): Sự tôn trọng đối với người khác và mọi thứ xung quanh.
+      3. Thanh (清 - Sei): Sự trong sạch trong tâm hồn và môi trường.
+      4. Tịch (寂 - Jaku): Sự tĩnh lặng và bình yên trong tâm trí.
+      Những nguyên tắc này không chỉ áp dụng trong trà đạo mà còn trong lối sống của người Nhật.
+    `,
   },
   {
     question: "Nhật Bản nằm ở vị trí nào trên bản đồ thế giới?",
