@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Answer, CellState } from "../../types";
 import QuestionModal from "../Question/QuestionModal";
 import { Question } from "../../datas/question";
+import { CELL_SIZE, CELL_SIZE_UNIT } from "../../configs/size";
 
 type CellProps = {
   cellState: CellState;
@@ -32,7 +33,11 @@ const Cell: React.FC<CellProps> = ({
   };
   return (
     <div
-      className={`w-12 h-12 flex items-center justify-center ${getCellColor()}`}
+      className={`flex items-center justify-center ${getCellColor()}`}
+      style={{
+        width: CELL_SIZE + CELL_SIZE_UNIT,
+        height: CELL_SIZE + CELL_SIZE_UNIT,
+      }}
     >
       {cellState === CellState.QUESTION && (
         <img src="images/question.png" alt="question" />

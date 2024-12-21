@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { CHARACTER_RIGHT } from "../../configs/character";
+import { CELL_SIZE, CELL_SIZE_UNIT } from "../../configs/size";
 
 export type CharacterPosition = {
   row: number;
@@ -19,14 +20,18 @@ const Character: React.FC<CharacterProps> = ({
 }) => {
   const characterRef = useRef<HTMLDivElement>(null);
   const getTransformPosition = () => {
-    const x = 3 * position.col;
-    const y = 3 * position.row;
-    return `translateX(${x}rem) translateY(${y}rem)`;
+    const x = CELL_SIZE * position.col;
+    const y = CELL_SIZE * position.row;
+    return `translateX(${x}${CELL_SIZE_UNIT}) translateY(${y}${CELL_SIZE_UNIT})`;
   };
   return (
     <div
-      className="absolute top-0 left-0 character flex items-center justify-center w-12 h-12"
-      style={{ transform: getTransformPosition() }}
+      className="absolute top-0 left-0 character flex items-center justify-center"
+      style={{
+        transform: getTransformPosition(),
+        width: CELL_SIZE + CELL_SIZE_UNIT,
+        height: CELL_SIZE + CELL_SIZE_UNIT,
+      }}
       ref={characterRef}
     >
       <img width={size} height={size} src={image} alt="nobita" />

@@ -24,17 +24,19 @@ function App() {
       )}
       {start && (
         <>
-          <div className="flex justify-center h-40 items-center absolute top-0 left-1/2 -translate-x-1/2">
-            <img width={400} src="images/logo.png" alt="logo" />
+          <div className="flex flex-col h-full">
+            <div className="flex justify-center h-32 items-center">
+              <img width={400} src="images/logo.png" alt="logo" />
+            </div>
+            <Board
+              initBoard={BOARD}
+              endPosition={END_POSITION}
+              onFinish={(type) => {
+                setFinishType(type);
+                setOpenFinishModal(true);
+              }}
+            />
           </div>
-          <Board
-            initBoard={BOARD}
-            endPosition={END_POSITION}
-            onFinish={(type) => {
-              setFinishType(type);
-              setOpenFinishModal(true);
-            }}
-          />
           <FinishModal
             type={finishType}
             isOpen={openFinishModal}

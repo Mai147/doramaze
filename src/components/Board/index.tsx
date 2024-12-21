@@ -10,6 +10,7 @@ import {
   CHARACTER_RIGHT,
 } from "../../configs/character";
 import { QuestionData } from "../../datas/question";
+import { CELL_SIZE, CELL_SIZE_UNIT } from "../../configs/size";
 
 type BoardProps = {
   initBoard: CellState[][];
@@ -199,9 +200,11 @@ const Board: React.FC<BoardProps> = ({ initBoard, onFinish, endPosition }) => {
       <div
         className={`absolute border-8 border-[#99682F] rounded-sm`}
         style={{
-          width: `calc(${board[0].length * 3}rem + 16px)`,
-          height: `calc(${board.length * 3}rem + 16px)`,
-          left: `calc(((100vw - ${board[0].length * 3}rem) / 2) - 8px)`,
+          width: `calc(${board[0].length * CELL_SIZE}${CELL_SIZE_UNIT} + 16px)`,
+          height: `calc(${board.length * CELL_SIZE}${CELL_SIZE_UNIT} + 16px)`,
+          left: `calc(((100vw - ${
+            board[0].length * CELL_SIZE
+          }${CELL_SIZE_UNIT}) / 2) - 8px)`,
           top: `-8px`,
         }}
       ></div>

@@ -1,3 +1,6 @@
+/**
+ * START MODAL
+ */
 export const START_MODAL_WIDTH = "80vw";
 export const START_MODAL_HEIGHT = "80vh";
 export const START_MODAL_TEXT_MAX_WIDTH = "70vw";
@@ -16,3 +19,9 @@ export const START_MODAL_TUTORIAL_TEXT_SKIP_MARGIN = "1rem";
 export const START_MODAL_TUTORIAL_IMAGE1_SIZE = 200;
 export const START_MODAL_TUTORIAL_IMAGE2_SIZE = 180;
 export const START_MODAL_TUTORIAL_IMAGE3_SIZE = 90;
+
+/**
+ * BOARD
+ */
+export const CELL_SIZE = 4;
+export const CELL_SIZE_UNIT = "rem";
