@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Answer } from "../../types";
 import { Utils } from "../../utils/Utils";
 import AnswerConfirmModal from "./AnswerConfirmModal";
+import { useAudio } from "../../context/AudioContext";
 
 type AnswerItemProps = {
   answer: Answer;
@@ -27,18 +28,35 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   const [isOpenConfirmModal, setIsOpenConfirmModal] = useState(false);
   const [selected, setSelected] = useState(false);
   const answerRef = useRef<HTMLDivElement>(null);
+  const {
+    state: { correctAudioRef, wrongAudioRef, currentAudio },
+    action: { playAudio, pauseAllAudio },
+  } = useAudio();
   const handleSelectAnswer = () => {
     if (!disableSelect) {
       setIsOpenConfirmModal(true);
     }
+  };
+  const playAnswerAudio = (isCorrect: boolean) => {
+    const prevAudio = currentAudio;
+    pauseAllAudio();
+    playAudio(
+      isCorrect ? correctAudioRef?.current : wrongAudioRef?.current,
+      false
+    );
+    setTimeout(() => {
+      playAudio(prevAudio);
+    }, 2000);
   };
   useEffect(() => {
     const showResult = async () => {
       if (answerRef.current) {
         if (isCorrect) {
           if (isEndByCountDown) {
+            // Wrong answer by countdown
             answerRef.current.style.background = "#ECA869";
             answerRef.current.style.color = "#fff";
+            playAnswerAudio(false);
             await Utils.sleep(2000);
             handleClose(false);
             return;
@@ -50,8 +68,13 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
           answerRef.current.style.background = "#FF7777";
           answerRef.current.style.color = "#fff";
         }
+        // Selected answer audio
+        if (selected) {
+          playAnswerAudio(isCorrect);
+        }
         await Utils.sleep(2000);
         if (selected) {
+          // Process selected answer
           handleClose(isCorrect);
         }
       }

@@ -26,7 +26,7 @@ const Character: React.FC<CharacterProps> = ({
   };
   return (
     <div
-      className="absolute top-0 left-0 character flex items-center justify-center"
+      className="absolute top-0 left-0 flex items-center justify-center transition-all duration-1000"
       style={{
         transform: getTransformPosition(),
         width: CELL_SIZE + CELL_SIZE_UNIT,
