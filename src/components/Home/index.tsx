@@ -5,7 +5,6 @@ import Board from "../Board";
 import { BOARD, END_POSITION } from "../../configs/board";
 import FinishModal from "../FinishModal";
 import { useAudio } from "../../context/AudioContext";
-import Button from "../Button";
 import InitModal from "../StartModal/InitModal";
 
 function Home() {
