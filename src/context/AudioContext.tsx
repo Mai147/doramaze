@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 type AudioContextState = {
   tutorialAudioRef: React.RefObject<HTMLAudioElement> | null;
@@ -8,6 +8,7 @@ type AudioContextState = {
   winAudioRef: React.RefObject<HTMLAudioElement> | null;
   loseAudioRef: React.RefObject<HTMLAudioElement> | null;
   currentAudio: HTMLAudioElement | null;
+  backgroundMuted: boolean;
 };
 
 type AudioContextAction = {
@@ -16,6 +17,7 @@ type AudioContextAction = {
   pauseAudio: (audio?: HTMLAudioElement | null) => void;
   pauseAllAudio: () => void;
   stopAllAudio: () => void;
+  setBackgroundMuted: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 type AudioContextType = {
@@ -32,6 +34,7 @@ const defaultAudioContext: AudioContextType = {
     winAudioRef: null,
     loseAudioRef: null,
     currentAudio: null,
+    backgroundMuted: false,
   },
   action: {
     playAudio: () => {},
@@ -39,6 +42,7 @@ const defaultAudioContext: AudioContextType = {
     pauseAudio: () => {},
     pauseAllAudio: () => {},
     stopAllAudio: () => {},
+    setBackgroundMuted: () => {},
   },
 };
 
@@ -51,9 +55,21 @@ export const AudioProvider = ({ children }: any) => {
   const wrongAudioRef = useRef<HTMLAudioElement>(null);
   const winAudioRef = useRef<HTMLAudioElement>(null);
   const loseAudioRef = useRef<HTMLAudioElement>(null);
+  useEffect(() => {
+    const handleBackgroundMute = (e: KeyboardEvent) => {
+      if (e.key === "m") {
+        setBackgroundMuted((prev) => !prev);
+      }
+    };
+    window.addEventListener("keyup", handleBackgroundMute);
+    return () => {
+      window.removeEventListener("keyup", handleBackgroundMute);
+    };
+  }, []);
   const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
     null
   );
+  const [backgroundMuted, setBackgroundMuted] = useState(true);
   const playAudio = (audio?: HTMLAudioElement | null, loop: boolean = true) => {
     if (audio) {
       setCurrentAudio(audio);
@@ -104,6 +120,7 @@ export const AudioProvider = ({ children }: any) => {
           winAudioRef,
           loseAudioRef,
           currentAudio,
+          backgroundMuted,
         },
         action: {
           playAudio,
@@ -111,6 +128,7 @@ export const AudioProvider = ({ children }: any) => {
           pauseAudio,
           pauseAllAudio,
           stopAllAudio,
+          setBackgroundMuted,
         },
       }}
     >
@@ -119,7 +137,11 @@ export const AudioProvider = ({ children }: any) => {
         src="audio/tutorial_out.mp3"
         autoPlay={true}
       ></audio>
-      <audio ref={backgroundAudioRef} src="audio/background_out.mp3"></audio>
+      <audio
+        ref={backgroundAudioRef}
+        src="audio/background_out.mp3"
+        muted={backgroundMuted}
+      ></audio>
       <audio ref={correctAudioRef} src="audio/correct.mp3"></audio>
       <audio ref={wrongAudioRef} src="audio/wrong.mp3"></audio>
       <audio ref={winAudioRef} src="audio/win.mp3"></audio>

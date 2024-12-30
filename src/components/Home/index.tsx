@@ -6,6 +6,7 @@ import { BOARD, END_POSITION } from "../../configs/board";
 import FinishModal from "../FinishModal";
 import { useAudio } from "../../context/AudioContext";
 import InitModal from "../StartModal/InitModal";
+import SoundMute from "../Sound/SoundMute";
 
 function Home() {
   const [init, setInit] = useState(true);
@@ -60,9 +61,12 @@ function Home() {
           )}
           {start && (
             <>
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full relative">
                 <div className="flex justify-center h-32 items-center">
                   <img width={400} src="images/logo.png" alt="logo" />
+                </div>
+                <div className="absolute top-4 right-4">
+                  <SoundMute />
                 </div>
                 <Board
                   initBoard={BOARD}

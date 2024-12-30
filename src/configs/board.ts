@@ -134,7 +134,7 @@ export const END_POSITION = {
 };
 
 const getQuestionPosition = () => {
-  let positions = [];
+  const positions = [];
   for (let i = 0; i < BOARD.length; i++) {
     for (let j = 0; j < BOARD[i].length; j++) {
       if (BOARD[i][j] === CellState.QUESTION) {

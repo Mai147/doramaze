@@ -11,10 +11,15 @@ export enum QuestionLevel {
 
 export type Question = {
   image?: string;
+  video?: string;
   question: string;
   answers: Answer[];
   correctAnswer: AnswerKeyValue;
-  explaination?: string;
+  time?: number;
+  explaination?: {
+    image?: string;
+    content: string;
+  };
   level: QuestionLevel;
   position: {
     row: number;
@@ -25,44 +30,41 @@ export type Question = {
 export const QuestionData: Question[] = [
   {
     question:
-      "Ai là người có công lớn trong việc thống nhất Nhật Bản, chấm dứt thời kỳ chiến loạn kéo dài trên khắp cả nước Nhật bản?",
+      "Tên ngôi làng cổ của Nhật Bản được cho là nguồn cảm hứng cho bối cảnh trong truyện tranh Doraemon là gì?",
+    image: 'images/questions/q1.jpg',
     answers: [
       {
-        content: "Oda Nobunaga",
+        content: "Làng Takayama",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Sengoku",
+        content: "Làng Shirakawago",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Susanoo",
+        content: "Làng Tottori",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Toyotomi Hideyoshi",
+        content: "Làng Toyama",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.A,
-    level: QuestionLevel.EASY,
-    position: QuestionPosition[0],
-    explaination: `
-Nếu con chim cúc cu không hót, hãy giết nó!
-    (Oda Nobunaga)
-Nếu con chim cúc cu không hót, hãy vuốt ve nó!
-    (Toyotomi Hideyoshi)
-Nếu con chim cúc cu không hót, hãy đợi nó!
-    (Tokugawa Ieyasu)
-    `,
+    correctAnswer: AnswerKeyValue.B,
+    level: QuestionLevel.HARD,
+    position: QuestionPosition[4],
+    explaination: {
+      content: `Shirakawa-go là ngôi làng cổ ở tỉnh Gifu, Nhật Bản, nổi tiếng với những ngôi nhà mái tranh dốc đứng theo kiến trúc Gassho-zukuri. Được UNESCO công nhận là Di sản Thế giới từ năm 1995, làng Shirakawa-go mang vẻ đẹp tuyệt vời suốt các mùa: tuyết phủ trắng vào mùa đông, sắc xanh tươi mát vào mùa xuân hè, và lá đỏ rực rỡ vào mùa thu. Đây là biểu tượng của sự hòa hợp giữa con người và thiên nhiên, là điểm đến lý tưởng để trải nghiệm vẻ đẹp truyền thống yên bình của Nhật Bản.`,
+      image: 'images/questions/q1_1.jpg'
+    }
   },
   {
-    question: "Đây là trang phục gì?",
-    image: "images/questions/q1.jpg",
+    question: "Shizuka đang diện đồ để đi lễ hội Bon. Cô bé đã chọn một bộ trang phục truyền thống của nhật bản. Tên gọi của nó là gì?",
+    image: "images/questions/q2.jpg",
     answers: [
       {
         content: "Yukata",
@@ -70,7 +72,7 @@ Nếu con chim cúc cu không hót, hãy đợi nó!
         key: "A",
       },
       {
-        content: "Kimono",
+        content: "Tomesode",
         value: AnswerKeyValue.B,
         key: "B",
       },
@@ -87,167 +89,171 @@ Nếu con chim cúc cu không hót, hãy đợi nó!
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[1],
+    position: QuestionPosition[7],
   },
   {
-    question: "Trong nghệ thuật trà đạo Nhật Bản, bốn nguyên tắc cơ bản là gì?",
-    image: "images/questions/q2.jpg",
+    question: `Suneo và Chaien thường rủ Nobita tham gia một môn thể thao rất phổ biến ở Nhật Bản, đến nỗi nó còn được mệnh danh là "vua của các môn thể thao". Đó là môn thể thao nào?`,
+    image: "images/questions/q3.jpg",
     answers: [
       {
-        content: "Hòa, Kính, Thanh, Tịnh",
+        content: "Bóng đá",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Tĩnh, Trang, Kỳ, Giản",
+        content: "Bóng bầu dục",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Hòa, Tịnh, Thực, An",
+        content: "Pickleball",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Kính, Trường, Chính, Tịch",
+        content: "Bóng chày",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.A,
-    level: QuestionLevel.HARD,
-    position: QuestionPosition[2],
-    explaination: `
-    Bốn nguyên tắc cơ bản của trà đạo Nhật Bản là:
-      1. Hòa (和 - Wa): Hài hòa giữa con người với thiên nhiên và xã hội.
-      2. Kính (敬 - Kei): Sự tôn trọng đối với người khác và mọi thứ xung quanh.
-      3. Thanh (清 - Sei): Sự trong sạch trong tâm hồn và môi trường.
-      4. Tịch (寂 - Jaku): Sự tĩnh lặng và bình yên trong tâm trí.
-      Những nguyên tắc này không chỉ áp dụng trong trà đạo mà còn trong lối sống của người Nhật.
-    `,
+    correctAnswer: AnswerKeyValue.D,
+    level: QuestionLevel.EASY,
+    position: QuestionPosition[12],
   },
   {
     question: "Nhật Bản nằm ở vị trí nào trên bản đồ thế giới?",
-    image: "images/questions/q3.jpg",
+    image: "images/questions/q4.jpg",
     answers: [
       {
-        content: "Tây Á",
+        content: "Phía Tây của châu Á",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Nam Á",
+        content: "Phía Nam của châu Á",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Đông Á",
+        content: "Phía Đông của châu Á, gần Thái Bình Dương",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Trung Á",
+        content: "Trung tâm châu Á",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.NORMAL,
-    position: QuestionPosition[3],
+    position: QuestionPosition[10],
   },
   {
-    question: "Vị thần tối cao trong thần thoại nhật bản là ai?",
-    image: "images/questions/q4.jpg",
+    question: 
+`Cậu nhỏ luôn thích khoe khoang, 
+Đồ chơi mới nhất mang sang mọi người. 
+Hùa theo "anh lớn" đôi lời, 
+Gặp nguy lại núp, khóc rồi cầu xin.
+Dù tinh ranh, lắm chuyện phiền, Nhưng cậu chẳng thiếu bạn hiền kề bên.
+
+Cậu nhỏ trong bài thơ này là ai?
+`,
     answers: [
       {
-        content: "Amaterasu",
+        content: "Nobita",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Susanoo",
+        content: "Suneo",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Ame-no-uzume",
+        content: "Chaien",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Fujin",
-        value: AnswerKeyValue.D,
-        key: "D",
-      },
-    ],
-    correctAnswer: AnswerKeyValue.A,
-    level: QuestionLevel.HARD,
-    position: QuestionPosition[4],
-  },
-  {
-    question:
-      "Đạo Shinto (Thần đạo) là tôn giáo bản địa của Nhật Bản. Trong Thần đạo, cổng Torii có ý nghĩa gì?",
-    image: "images/questions/q5.jpg",
-    answers: [
-      {
-        content: "Biểu tượng cho sự trường tồn",
-        value: AnswerKeyValue.A,
-        key: "A",
-      },
-      {
-        content: "Ranh giới giữa thế giới phàm tục và thần linh",
-        value: AnswerKeyValue.B,
-        key: "B",
-      },
-      {
-        content: "Lối vào đền chùa dành cho các vị thần",
-        value: AnswerKeyValue.C,
-        key: "C",
-      },
-      {
-        content: "Nơi cầu nguyện cho người quá cố",
+        content: "Dekisugi",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[5],
+    position: QuestionPosition[0],
   },
   {
-    question: "Đâu là hòn đảo lớn nhất trong 4 hòn đảo chính của Nhật Bản?",
+    question:
+      "Lần đầu tiên Doraemon xuất hiện, chú có màu gì?",
     answers: [
       {
-        content: "Honshu",
+        content: "Xanh dương",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Hokkaido",
+        content: "Trắng",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Kyushu",
+        content: "Vàng",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Shikoku",
+        content: "Đỏ",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.A,
+    correctAnswer: AnswerKeyValue.C,
+    explaination: {
+      image: 'images/questions/q6_1.jpg',
+      content: ' Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.'
+    },
+    level: QuestionLevel.EASY,
+    position: QuestionPosition[5],
+  },
+  {
+    question: "Ba của Nobita đã bo cho Nobi 1 đồng tiền xu. Đơn vị của đồng xu này là gì?",
+    image: 'images/questions/q7.jpg',
+    answers: [
+      {
+        content: "Won",
+        value: AnswerKeyValue.A,
+        key: "A",
+      },
+      {
+        content: "Yên",
+        value: AnswerKeyValue.B,
+        key: "B",
+      },
+      {
+        content: "Baht",
+        value: AnswerKeyValue.C,
+        key: "C",
+      },
+      {
+        content: "Nhân dân tệ",
+        value: AnswerKeyValue.D,
+        key: "D",
+      },
+    ],
+    correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.HARD,
-    position: QuestionPosition[6],
+    position: QuestionPosition[11],
   },
   {
     question:
-      "Món ăn nào là món ăn truyền thống nổi tiếng của Nhật Bản, được làm từ gạo và hải sản sống?",
+      "Suneo đang ăn một món ăn vô cùng quen thuộc với người Nhật, tên món ăn này là?",
+    image: 'images/questions/q8.jpg',
     answers: [
       {
-        content: "Sushi",
+        content: "Nagashi somen",
         value: AnswerKeyValue.A,
         key: "A",
       },
@@ -257,115 +263,127 @@ Nếu con chim cúc cu không hót, hãy đợi nó!
         key: "B",
       },
       {
-        content: "Tempura",
+        content: "Bánh trôi nước",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Sashimi",
+        content: "Mì Udon",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.A,
+    explaination: {
+      content: 'Nagashi somen còn được gọi là bún trôi ống tre =))'
+    },
     level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[7],
-  },
-  {
-    question: "Ở Nhật Bản người trên bức hình này có chức vị:",
-    image: "images/questions/q6.jpg",
-    answers: [
-      {
-        content: "Thương gia",
-        value: AnswerKeyValue.A,
-        key: "A",
-      },
-      {
-        content: "Quý tộc",
-        value: AnswerKeyValue.B,
-        key: "B",
-      },
-      {
-        content: "Tướng quân",
-        value: AnswerKeyValue.C,
-        key: "C",
-      },
-      {
-        content: "Thiên Hoàng",
-        value: AnswerKeyValue.D,
-        key: "D",
-      },
-    ],
-    correctAnswer: AnswerKeyValue.D,
-    level: QuestionLevel.NORMAL,
     position: QuestionPosition[8],
   },
   {
+    question: "Món ăn vặt mà các bạn vừa xem video ở trên là gì?",
+    video: "images/questions/q9.mp4",
+    time: 60,
+    answers: [
+      {
+        content: "Mochi",
+        value: AnswerKeyValue.A,
+        key: "A",
+      },
+      {
+        content: "Sushi",
+        value: AnswerKeyValue.B,
+        key: "B",
+      },
+      {
+        content: "Dorayaki",
+        value: AnswerKeyValue.C,
+        key: "C",
+      },
+      {
+        content: "Takoyaki",
+        value: AnswerKeyValue.D,
+        key: "D",
+      },
+    ],
+    correctAnswer: AnswerKeyValue.C,
+    explaination: {
+      content: 'Dorayaki là bánh rán ngọt truyền thống của Nhật, gồm hai lớp bánh mềm kẹp nhân đậu đỏ. Bánh có vị ngọt dịu, thơm ngon và rất phổ biến. Đây là món ăn yêu thích của Doraemon, gắn liền với hình ảnh cậu mèo máy.'
+    },
+    level: QuestionLevel.MIDDLE,
+    position: QuestionPosition[17],
+  },
+  {
     question:
-      "Minh Trị Duy Tân (1868 - 1912) đã thay đổi Nhật Bản ra sao về chính trị và công nghiệp hóa?",
-    image: "images/questions/q7.jpg",
+      "Trong văn hóa dùng đũa của Nhật Bản, hành động nào sau đây được coi là không phù hợp?",
+    video: "images/questions/q10.mp4",
+    time: 60,
     answers: [
       {
         content:
-          "Chuyển đổi từ chế độ phong kiến sang chính phủ hiện đại, phát triển công nghiệp hóa, quân đội và giao thương với phương Tây.",
+          "Không dùng đũa để chỉ trỏ hay chọc vào người khác",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
         content:
-          "Giữ nguyên chế độ phong kiến, tập trung vào nông nghiệp và hạn chế giao thương với phương Tây.",
+          "Đặt đũa ngang trên bát khi nghỉ tay",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
         content:
-          "Tăng cường quyền lực cho tầng lớp võ sĩ đạo và phát triển nông nghiệp truyền thống.",
+          "Chuyền thức ăn trực tiếp từ đũa này sang đũa khác",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
         content:
-          "Phát triển kinh tế dựa trên thương mại nội địa và duy trì chính sách đóng cửa với các nước phương Tây.",
+          "Dùng đũa để gắp thức ăn nhẹ nhàng",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.A,
-    level: QuestionLevel.SUPER_HARD,
-    position: QuestionPosition[9],
+    correctAnswer: AnswerKeyValue.C,
+    explaination: {
+      content: 'Chuyền thức ăn từ đũa này sang đũa khác bị cấm trong văn hóa Nhật Bản vì nó giống với nghi lễ tang lễ. Hành động này được coi là không tôn trọng, vì vậy người Nhật thường tránh làm trong bữa ăn.'
+    },
+    level: QuestionLevel.NORMAL,
+    position: QuestionPosition[15],
   },
   {
     question:
-      'Sự kiện "Sengoku Jidai" (Chiến Quốc Thời Đại) kéo dài bao lâu, và ai là người kết thúc thời kỳ này?',
-    image: "images/questions/q8.jpg",
+      'Nobita và Doraemon sử dụng cỗ máy thời gian để tới thăm Sewashi. Nhưng cỗ máy bị hỏng đã dẫn cả hai tới một địa điểm kì lạ. Theo bạn, nobi và dora đã bị đưa đến thời kì nào?',
+    image: "images/questions/q11.jpg",
     answers: [
       {
-        content: "Kéo dài khoảng 100 năm, kết thúc bởi Toyotomi Hideyoshi",
+        content: "Nara",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Kéo dài khoảng 150 năm, kết thúc bởi Tokugawa Ieyasu",
+        content: "Minh Trị",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Kéo dài khoảng 200 năm, kết thúc bởi Oda Nobunaga",
+        content: "Edo",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Kéo dài khoảng 50 năm, kết thúc bởi Takeda Shingen",
+        content: "Jomon",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.B,
-    level: QuestionLevel.SUPER_HARD,
-    position: QuestionPosition[10],
+    correctAnswer: AnswerKeyValue.C,
+    level: QuestionLevel.HARD,
+    position: QuestionPosition[19],
   },
   {
-    question: "Hệ thống chữ viết của Nhật Bản gồm những loại chữ nào?",
+    question: "Bản manga Doraemon được viết bằng những bộ chữ cái nào?",
+    image: 'images/questions/q12.jpg',
     answers: [
       {
         content: "Furigana và Hangul",
@@ -390,69 +408,73 @@ Nếu con chim cúc cu không hót, hãy đợi nó!
     ],
     correctAnswer: AnswerKeyValue.D,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[11],
+    position: QuestionPosition[16],
   },
   {
     question:
-      "Người đề ra các cuộc cái cách, đổi mới đưa nhật bản từ một nước lạc hậu trờ thành cường quốc trong thế chiến thứ 2 là ai?",
+`Hội bạn của Nobita đang lên kế hoạch cho một buổi picnic thật vui vẻ. Tuy nhiên, nobita không biết khi nào là thời điểm thích hợp để hoa đào nở rộ.
+ Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
+`,
+    image: 'images/questions/q13.jpg',
     answers: [
       {
-        content: "Thiên hoàng minh trị",
+        content: "Từ tháng 12-tháng 2",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Thiên hoàng khâm minh",
+        content: "Từ tháng 3-tháng 5",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Thiên hoàng thần vũ",
+        content: "Từ tháng 7-tháng 9",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Thiên hoàng dụng minh thiên hoàng",
+        content: "Từ tháng 9-tháng 11",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.A,
-    level: QuestionLevel.NORMAL,
-    position: QuestionPosition[12],
+    correctAnswer: AnswerKeyValue.B,
+    level: QuestionLevel.HARD,
+    position: QuestionPosition[2],
   },
   {
-    question: "Tên của chuyến tàu cao tốc nổi tiếng của Nhật Bản là gì?",
+    question: "Nhóm bạn của Nôbita đang thi xem ai là người có thể quỳ gối trên chiếc tatami lâu nhất. Ở Nhật bản, đây là kiểu ngồi truyền thống của người Nhật Bản và thể hiện đức tính…?",
+    image: 'images/questions/q14.jpg',
     answers: [
       {
-        content: "Hikari",
+        content: "Cần cù, chịu khó",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Kodama",
+        content: "Cố gắng, nỗ lực",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Shinkansen",
+        content: "Nhẫn nại, kiên trì",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Nozomi",
+        content: "Lịch sự, phép tắc",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[13],
+    position: QuestionPosition[1],
   },
   {
     question:
       'Tên "Doraemon" được ghép bởi 2 từ dora và emon. Vậy chúng có ý nghĩa gì?',
-    image: "images/questions/q9.jpg",
+    image: "images/questions/q15.jpg",
     answers: [
       {
         content:
@@ -480,152 +502,165 @@ Nếu con chim cúc cu không hót, hãy đợi nó!
       },
     ],
     correctAnswer: AnswerKeyValue.B,
-    level: QuestionLevel.MIDDLE,
+    level: QuestionLevel.HARD,
     position: QuestionPosition[14],
   },
   {
-    question: "Tên gọi chính thức của quốc kỳ Nhật Bản là gì?",
-    image: "images/questions/q10.jpg",
+    question: "Đây là trò chơi thẻ bài nổi tiếng ở xứ sở hoa anh đào. Bạn có biết tên của trò chơi này là gì không?",
+    image: "images/questions/q16.jpg",
     answers: [
       {
-        content: "Hinomaru hoặc Nisshoki",
+        content: "Yugioh",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Nihonki hoặc Asahimaru",
+        content: "Cloud",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Yamato hoặc Tairikimaru",
+        content: "Poker",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Sakura hoặc Fuji",
+        content: "Karuta",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.A,
-    level: QuestionLevel.NORMAL,
-    position: QuestionPosition[15],
+    correctAnswer: AnswerKeyValue.D,
+    explaination: {
+      content: 'Karuta – Trò chơi thẻ bài truyền thống của Nhật Bản, thường được chơi vào dịp năm mới, liên quan đến việc đọc thơ và tìm thẻ tương ứng.'
+    },
+    level: QuestionLevel.HARD,
+    position: QuestionPosition[6],
   },
   {
     question:
-      "Thành Himeji, một trong những lâu đài nổi tiếng nhất Nhật Bản, còn được gọi là gì?",
-    image: "images/questions/q11.jpg",
+      "Nơi nào trong Doraemon thường xuyên là bối cảnh cho các cuộc phiêu lưu và hành động kỳ thú của các nhân vật?",
     answers: [
       {
-        content: "Lâu đài Mèo Trắng",
+        content: "Khu rừng sâu",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Lâu đài Hạc Trắng",
+        content: "Công viên gần nhà Nobita",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Lâu đài Bạch Phượng ",
+        content: "Khu phố đông đúc ở Tokyo",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Lâu đài Bạch Long",
+        content: "Nhà của Shizuka",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[16],
-  },
-  {
-    question: "Đơn vị tiền tệ chính thức của Nhật Bản là gì?",
-    answers: [
-      {
-        content: "Won",
-        value: AnswerKeyValue.A,
-        key: "A",
-      },
-      {
-        content: "Yên",
-        value: AnswerKeyValue.B,
-        key: "B",
-      },
-      {
-        content: "Baht",
-        value: AnswerKeyValue.C,
-        key: "C",
-      },
-      {
-        content: "Nhân dân tệ",
-        value: AnswerKeyValue.D,
-        key: "D",
-      },
-    ],
-    correctAnswer: AnswerKeyValue.B,
-    level: QuestionLevel.EASY,
-    position: QuestionPosition[17],
-  },
-  {
-    question: "Lễ hội hoa anh đào thường diễn ra vào khoảng thời gian nào?",
-    image: "images/questions/q12.jpg",
-    answers: [
-      {
-        content: "Từ tháng 12-tháng 2",
-        value: AnswerKeyValue.A,
-        key: "A",
-      },
-      {
-        content: "Từ tháng 3-tháng 5",
-        value: AnswerKeyValue.B,
-        key: "B",
-      },
-      {
-        content: "Từ tháng 7-tháng 9",
-        value: AnswerKeyValue.C,
-        key: "C",
-      },
-      {
-        content: "Từ tháng 9-tháng 11",
-        value: AnswerKeyValue.D,
-        key: "D",
-      },
-    ],
-    correctAnswer: AnswerKeyValue.B,
-    level: QuestionLevel.HARD,
     position: QuestionPosition[18],
   },
   {
-    question:
-      "Nhật Bản có tỷ lệ dân số già cao nhất thế giới. Khoảng bao nhiêu phần trăm dân số Nhật Bản trên 65 tuổi?",
+    question: "Một trận đấu cờ đã nổ ra giữa Nôbita và suneo, với Nôbita là quân trắng còn suneo là quân đen. Đây là cờ gì?",
+    image: "images/questions/q18.jpg",
     answers: [
       {
-        content: "15%",
+        content: "Cờ tướng",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "20%",
+        content: "Ô ăn quan",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "30%",
+        content: "Cờ vây",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "35%",
+        content: "Cờ trắng đen",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.C,
-    level: QuestionLevel.NORMAL,
-    position: QuestionPosition[19],
+    level: QuestionLevel.EASY,
+    position: QuestionPosition[13],
+  },
+  {
+    question: "Đây là một loại hình nghệ thuật ở Nhật Bản. Tên gọi của nó là gì?",
+    image: "images/questions/q19.jpg",
+    answers: [
+      {
+        content: "Ikebana",
+        value: AnswerKeyValue.A,
+        key: "A",
+      },
+      {
+        content: "Kabuki",
+        value: AnswerKeyValue.B,
+        key: "B",
+      },
+      {
+        content: "Hanami",
+        value: AnswerKeyValue.C,
+        key: "C",
+      },
+      {
+        content: "Shodo",
+        value: AnswerKeyValue.D,
+        key: "D",
+      },
+    ],
+    correctAnswer: AnswerKeyValue.A,
+    explaination: {
+      content: 
+`
+      Ikebana – Nghệ thuật cắm hoa truyền thống Nhật Bản, thể hiện sự hài hòa giữa con người và thiên nhiên.
+      Kabuki – Kịch truyền thống với diễn viên hóa trang cầu kỳ.
+      Hanami – Hoạt động ngắm hoa anh đào.
+      Shodo – Nghệ thuật viết thư pháp bằng bút lông.
+`
+    },
+    level: QuestionLevel.HARD,
+    position: QuestionPosition[9],
+  },
+  {
+    question:
+      "Nhà của Nobita trong Doraemon có một số đặc điểm nổi bật mang đậm dấu ấn văn hóa Nhật Bản. Nhà của cậu thuộc kiểu nhà nào trong xã hội Nhật Bản?",
+      image: "images/questions/q20.jpg",
+    answers: [
+      {
+        content: "Nhà có không gian mở, với phòng tatami và cửa sliding kiểu Nhật",
+        value: AnswerKeyValue.A,
+        key: "A",
+      },
+      {
+        content: "Nhà có các phòng riêng biệt, được thiết kế theo phong cách phương Tây",
+        value: AnswerKeyValue.B,
+        key: "B",
+      },
+      {
+        content: "Nhà được xây dựng theo kiểu kiến trúc hiện đại, đầy đủ công nghệ cao",
+        value: AnswerKeyValue.C,
+        key: "C",
+      },
+      {
+        content: "Nhà có không gian tối giản, chủ yếu là phòng khách rộng rãi",
+        value: AnswerKeyValue.D,
+        key: "D",
+      },
+    ],
+    correctAnswer: AnswerKeyValue.A,
+    level: QuestionLevel.EASY,
+    position: QuestionPosition[3],
   },
 ];
