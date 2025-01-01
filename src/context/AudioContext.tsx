@@ -1,4 +1,11 @@
-import { createContext, useContext, useEffect, useRef, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 type AudioContextState = {
   tutorialAudioRef: React.RefObject<HTMLAudioElement> | null;
@@ -48,7 +55,7 @@ const defaultAudioContext: AudioContextType = {
 
 const AudioContext = createContext<AudioContextType>(defaultAudioContext);
 
-export const AudioProvider = ({ children }: any) => {
+export const AudioProvider = ({ children }: { children: ReactNode }) => {
   const tutorialAudioRef = useRef<HTMLAudioElement>(null);
   const backgroundAudioRef = useRef<HTMLAudioElement>(null);
   const correctAudioRef = useRef<HTMLAudioElement>(null);
@@ -69,7 +76,7 @@ export const AudioProvider = ({ children }: any) => {
   const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
     null
   );
-  const [backgroundMuted, setBackgroundMuted] = useState(true);
+  const [backgroundMuted, setBackgroundMuted] = useState(false);
   const playAudio = (audio?: HTMLAudioElement | null, loop: boolean = true) => {
     if (audio) {
       setCurrentAudio(audio);
