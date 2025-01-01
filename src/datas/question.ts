@@ -28,6 +28,7 @@ export type Question = {
 };
 
 export const QuestionData: Question[] = [
+  // Q1
   {
     question:
       "Tên ngôi làng cổ của Nhật Bản được cho là nguồn cảm hứng cho bối cảnh trong truyện tranh Doraemon là gì?",
@@ -62,6 +63,7 @@ export const QuestionData: Question[] = [
       image: 'images/questions/q1_1.jpg'
     }
   },
+  // Q2
   {
     question: "Shizuka đang diện đồ để đi lễ hội Bon. Cô bé đã chọn một bộ trang phục truyền thống của nhật bản. Tên gọi của nó là gì?",
     image: "images/questions/q2.jpg",
@@ -91,6 +93,7 @@ export const QuestionData: Question[] = [
     level: QuestionLevel.MIDDLE,
     position: QuestionPosition[7],
   },
+  // Q3
   {
     question: `Suneo và Chaien thường rủ Nobita tham gia một môn thể thao rất phổ biến ở Nhật Bản, đến nỗi nó còn được mệnh danh là "vua của các môn thể thao". Đó là môn thể thao nào?`,
     image: "images/questions/q3.jpg",
@@ -120,35 +123,7 @@ export const QuestionData: Question[] = [
     level: QuestionLevel.EASY,
     position: QuestionPosition[12],
   },
-  {
-    question: "Nhật Bản nằm ở vị trí nào trên bản đồ thế giới?",
-    image: "images/questions/q4.jpg",
-    answers: [
-      {
-        content: "Phía Tây của châu Á",
-        value: AnswerKeyValue.A,
-        key: "A",
-      },
-      {
-        content: "Phía Nam của châu Á",
-        value: AnswerKeyValue.B,
-        key: "B",
-      },
-      {
-        content: "Phía Đông của châu Á, gần Thái Bình Dương",
-        value: AnswerKeyValue.C,
-        key: "C",
-      },
-      {
-        content: "Trung tâm châu Á",
-        value: AnswerKeyValue.D,
-        key: "D",
-      },
-    ],
-    correctAnswer: AnswerKeyValue.C,
-    level: QuestionLevel.NORMAL,
-    position: QuestionPosition[10],
-  },
+  // Q4
   {
     question: 
 `Cậu nhỏ luôn thích khoe khoang, 
@@ -183,41 +158,39 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[0],
+    position: QuestionPosition[10],
   },
+  // Q5
   {
-    question:
-      "Lần đầu tiên Doraemon xuất hiện, chú có màu gì?",
+    question: "Nhật Bản nằm ở vị trí nào trên bản đồ thế giới?",
+    image: "images/questions/q4.jpg",
     answers: [
       {
-        content: "Xanh dương",
+        content: "Phía Tây của châu Á",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Trắng",
+        content: "Phía Nam của châu Á",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Vàng",
+        content: "Phía Đông của châu Á, gần Thái Bình Dương",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Đỏ",
+        content: "Trung tâm châu Á",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.C,
-    explaination: {
-      image: 'images/questions/q6_1.jpg',
-      content: ' Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.'
-    },
-    level: QuestionLevel.EASY,
-    position: QuestionPosition[5],
+    level: QuestionLevel.NORMAL,
+    position: QuestionPosition[0],
   },
+  // Q6
   {
     question: "Ba của Nobita đã bo cho Nobi 1 đồng tiền xu. Đơn vị của đồng xu này là gì?",
     image: 'images/questions/q7.jpg',
@@ -245,8 +218,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.HARD,
-    position: QuestionPosition[11],
+    position: QuestionPosition[5],
   },
+  // Q7
   {
     question:
       "Suneo đang ăn một món ăn vô cùng quen thuộc với người Nhật, tên món ăn này là?",
@@ -278,8 +252,9 @@ Cậu nhỏ trong bài thơ này là ai?
       content: 'Nagashi somen còn được gọi là bún trôi ống tre =))'
     },
     level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[8],
+    position: QuestionPosition[11],
   },
+  // Q8
   {
     question: "Món ăn vặt mà các bạn vừa xem video ở trên là gì?",
     video: "images/questions/q9.mp4",
@@ -311,8 +286,9 @@ Cậu nhỏ trong bài thơ này là ai?
       content: 'Dorayaki là bánh rán ngọt truyền thống của Nhật, gồm hai lớp bánh mềm kẹp nhân đậu đỏ. Bánh có vị ngọt dịu, thơm ngon và rất phổ biến. Đây là món ăn yêu thích của Doraemon, gắn liền với hình ảnh cậu mèo máy.'
     },
     level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[17],
+    position: QuestionPosition[8],
   },
+  // Q9
   {
     question:
       "Trong văn hóa dùng đũa của Nhật Bản, hành động nào sau đây được coi là không phù hợp?",
@@ -349,8 +325,9 @@ Cậu nhỏ trong bài thơ này là ai?
       content: 'Chuyền thức ăn từ đũa này sang đũa khác bị cấm trong văn hóa Nhật Bản vì nó giống với nghi lễ tang lễ. Hành động này được coi là không tôn trọng, vì vậy người Nhật thường tránh làm trong bữa ăn.'
     },
     level: QuestionLevel.NORMAL,
-    position: QuestionPosition[15],
+    position: QuestionPosition[17],
   },
+  // Q10
   {
     question:
       'Nobita và Doraemon sử dụng cỗ máy thời gian để tới thăm Sewashi. Nhưng cỗ máy bị hỏng đã dẫn cả hai tới một địa điểm kì lạ. Theo bạn, nobi và dora đã bị đưa đến thời kì nào?',
@@ -379,8 +356,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.HARD,
-    position: QuestionPosition[19],
+    position: QuestionPosition[15],
   },
+  // Q11
   {
     question: "Bản manga Doraemon được viết bằng những bộ chữ cái nào?",
     image: 'images/questions/q12.jpg',
@@ -408,8 +386,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.D,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[16],
+    position: QuestionPosition[19],
   },
+  // Q12
   {
     question:
 `Hội bạn của Nobita đang lên kế hoạch cho một buổi picnic thật vui vẻ. Tuy nhiên, nobita không biết khi nào là thời điểm thích hợp để hoa đào nở rộ.
@@ -440,8 +419,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.HARD,
-    position: QuestionPosition[2],
+    position: QuestionPosition[16],
   },
+  // Q13
   {
     question: "Nhóm bạn của Nôbita đang thi xem ai là người có thể quỳ gối trên chiếc tatami lâu nhất. Ở Nhật bản, đây là kiểu ngồi truyền thống của người Nhật Bản và thể hiện đức tính…?",
     image: 'images/questions/q14.jpg',
@@ -469,8 +449,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[1],
+    position: QuestionPosition[2],
   },
+  // Q14
   {
     question:
       'Tên "Doraemon" được ghép bởi 2 từ dora và emon. Vậy chúng có ý nghĩa gì?',
@@ -503,8 +484,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.HARD,
-    position: QuestionPosition[14],
+    position: QuestionPosition[1],
   },
+  // Q15
   {
     question: "Đây là trò chơi thẻ bài nổi tiếng ở xứ sở hoa anh đào. Bạn có biết tên của trò chơi này là gì không?",
     image: "images/questions/q16.jpg",
@@ -535,37 +517,9 @@ Cậu nhỏ trong bài thơ này là ai?
       content: 'Karuta – Trò chơi thẻ bài truyền thống của Nhật Bản, thường được chơi vào dịp năm mới, liên quan đến việc đọc thơ và tìm thẻ tương ứng.'
     },
     level: QuestionLevel.HARD,
-    position: QuestionPosition[6],
+    position: QuestionPosition[14],
   },
-  {
-    question:
-      "Nơi nào trong Doraemon thường xuyên là bối cảnh cho các cuộc phiêu lưu và hành động kỳ thú của các nhân vật?",
-    answers: [
-      {
-        content: "Khu rừng sâu",
-        value: AnswerKeyValue.A,
-        key: "A",
-      },
-      {
-        content: "Công viên gần nhà Nobita",
-        value: AnswerKeyValue.B,
-        key: "B",
-      },
-      {
-        content: "Khu phố đông đúc ở Tokyo",
-        value: AnswerKeyValue.C,
-        key: "C",
-      },
-      {
-        content: "Nhà của Shizuka",
-        value: AnswerKeyValue.D,
-        key: "D",
-      },
-    ],
-    correctAnswer: AnswerKeyValue.B,
-    level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[18],
-  },
+  // Q16
   {
     question: "Một trận đấu cờ đã nổ ra giữa Nôbita và suneo, với Nôbita là quân trắng còn suneo là quân đen. Đây là cờ gì?",
     image: "images/questions/q18.jpg",
@@ -593,8 +547,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[13],
+    position: QuestionPosition[6],
   },
+  // Q17
   {
     question: "Đây là một loại hình nghệ thuật ở Nhật Bản. Tên gọi của nó là gì?",
     image: "images/questions/q19.jpg",
@@ -631,8 +586,73 @@ Cậu nhỏ trong bài thơ này là ai?
 `
     },
     level: QuestionLevel.HARD,
+    position: QuestionPosition[18],
+  },
+  // Q18
+  {
+        question:
+      "Lần đầu tiên Doraemon xuất hiện, chú có màu gì?",
+    answers: [
+      {
+        content: "Xanh dương",
+        value: AnswerKeyValue.A,
+        key: "A",
+      },
+      {
+        content: "Trắng",
+        value: AnswerKeyValue.B,
+        key: "B",
+      },
+      {
+        content: "Vàng",
+        value: AnswerKeyValue.C,
+        key: "C",
+      },
+      {
+        content: "Đỏ",
+        value: AnswerKeyValue.D,
+        key: "D",
+      },
+    ],
+    correctAnswer: AnswerKeyValue.C,
+    explaination: {
+      image: 'images/questions/q6_1.jpg',
+      content: ' Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.'
+    },
+    level: QuestionLevel.EASY,
+    position: QuestionPosition[13],
+  },
+  // Q19
+  {
+    question:
+      "Nơi nào trong Doraemon thường xuyên là bối cảnh cho các cuộc phiêu lưu và hành động kỳ thú của các nhân vật?",
+    answers: [
+      {
+        content: "Khu rừng sâu",
+        value: AnswerKeyValue.A,
+        key: "A",
+      },
+      {
+        content: "Công viên gần nhà Nobita",
+        value: AnswerKeyValue.B,
+        key: "B",
+      },
+      {
+        content: "Khu phố đông đúc ở Tokyo",
+        value: AnswerKeyValue.C,
+        key: "C",
+      },
+      {
+        content: "Nhà của Shizuka",
+        value: AnswerKeyValue.D,
+        key: "D",
+      },
+    ],
+    correctAnswer: AnswerKeyValue.B,
+    level: QuestionLevel.MIDDLE,
     position: QuestionPosition[9],
   },
+  // Q20
   {
     question:
       "Nhà của Nobita trong Doraemon có một số đặc điểm nổi bật mang đậm dấu ấn văn hóa Nhật Bản. Nhà của cậu thuộc kiểu nhà nào trong xã hội Nhật Bản?",
