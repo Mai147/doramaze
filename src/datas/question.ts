@@ -32,7 +32,7 @@ export const QuestionData: Question[] = [
   {
     question:
       "Tên ngôi làng cổ của Nhật Bản được cho là nguồn cảm hứng cho bối cảnh trong truyện tranh Doraemon là gì?",
-    image: 'images/questions/q1.jpg',
+    image: "images/questions/q1.jpg",
     answers: [
       {
         content: "Làng Takayama",
@@ -60,12 +60,13 @@ export const QuestionData: Question[] = [
     position: QuestionPosition[4],
     explaination: {
       content: `Shirakawa-go là ngôi làng cổ ở tỉnh Gifu, Nhật Bản, nổi tiếng với những ngôi nhà mái tranh dốc đứng theo kiến trúc Gassho-zukuri. Được UNESCO công nhận là Di sản Thế giới từ năm 1995, làng Shirakawa-go mang vẻ đẹp tuyệt vời suốt các mùa: tuyết phủ trắng vào mùa đông, sắc xanh tươi mát vào mùa xuân hè, và lá đỏ rực rỡ vào mùa thu. Đây là biểu tượng của sự hòa hợp giữa con người và thiên nhiên, là điểm đến lý tưởng để trải nghiệm vẻ đẹp truyền thống yên bình của Nhật Bản.`,
-      image: 'images/questions/q1_1.jpg'
-    }
+      image: "images/questions/q1_1.jpg",
+    },
   },
   // Q2
   {
-    question: "Shizuka đang diện đồ để đi lễ hội Bon. Cô bé đã chọn một bộ trang phục truyền thống của nhật bản. Tên gọi của nó là gì?",
+    question:
+      "Shizuka đang diện đồ để đi lễ hội Bon. Cô bé đã chọn một bộ trang phục truyền thống của nhật bản. Tên gọi của nó là gì?",
     image: "images/questions/q2.jpg",
     answers: [
       {
@@ -125,8 +126,7 @@ export const QuestionData: Question[] = [
   },
   // Q4
   {
-    question: 
-`Cậu nhỏ luôn thích khoe khoang, 
+    question: `Cậu nhỏ luôn thích khoe khoang, 
 Đồ chơi mới nhất mang sang mọi người. 
 Hùa theo "anh lớn" đôi lời, 
 Gặp nguy lại núp, khóc rồi cầu xin.
@@ -163,7 +163,7 @@ Cậu nhỏ trong bài thơ này là ai?
   // Q5
   {
     question: "Nhật Bản nằm ở vị trí nào trên bản đồ thế giới?",
-    image: "images/questions/q4.jpg",
+    image: "images/questions/q5.jpg",
     answers: [
       {
         content: "Phía Tây của châu Á",
@@ -192,8 +192,9 @@ Cậu nhỏ trong bài thơ này là ai?
   },
   // Q6
   {
-    question: "Ba của Nobita đã bo cho Nobi 1 đồng tiền xu. Đơn vị của đồng xu này là gì?",
-    image: 'images/questions/q7.jpg',
+    question:
+      "Ba của Nobita đã bo cho Nobi 1 đồng tiền xu. Đơn vị của đồng xu này là gì?",
+    image: "images/questions/q7.jpg",
     answers: [
       {
         content: "Won",
@@ -224,7 +225,7 @@ Cậu nhỏ trong bài thơ này là ai?
   {
     question:
       "Suneo đang ăn một món ăn vô cùng quen thuộc với người Nhật, tên món ăn này là?",
-    image: 'images/questions/q8.jpg',
+    image: "images/questions/q8.jpg",
     answers: [
       {
         content: "Nagashi somen",
@@ -249,7 +250,7 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.A,
     explaination: {
-      content: 'Nagashi somen còn được gọi là bún trôi ống tre =))'
+      content: "Nagashi somen còn được gọi là bún trôi ống tre =))",
     },
     level: QuestionLevel.MIDDLE,
     position: QuestionPosition[11],
@@ -283,7 +284,8 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.C,
     explaination: {
-      content: 'Dorayaki là bánh rán ngọt truyền thống của Nhật, gồm hai lớp bánh mềm kẹp nhân đậu đỏ. Bánh có vị ngọt dịu, thơm ngon và rất phổ biến. Đây là món ăn yêu thích của Doraemon, gắn liền với hình ảnh cậu mèo máy.'
+      content:
+        "Dorayaki là bánh rán ngọt truyền thống của Nhật, gồm hai lớp bánh mềm kẹp nhân đậu đỏ. Bánh có vị ngọt dịu, thơm ngon và rất phổ biến. Đây là món ăn yêu thích của Doraemon, gắn liền với hình ảnh cậu mèo máy.",
     },
     level: QuestionLevel.MIDDLE,
     position: QuestionPosition[8],
@@ -296,33 +298,30 @@ Cậu nhỏ trong bài thơ này là ai?
     time: 60,
     answers: [
       {
-        content:
-          "Không dùng đũa để chỉ trỏ hay chọc vào người khác",
+        content: "Không dùng đũa để chỉ trỏ hay chọc vào người khác",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content:
-          "Đặt đũa ngang trên bát khi nghỉ tay",
+        content: "Đặt đũa ngang trên bát khi nghỉ tay",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content:
-          "Chuyền thức ăn trực tiếp từ đũa này sang đũa khác",
+        content: "Chuyền thức ăn trực tiếp từ đũa này sang đũa khác",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content:
-          "Dùng đũa để gắp thức ăn nhẹ nhàng",
+        content: "Dùng đũa để gắp thức ăn nhẹ nhàng",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.C,
     explaination: {
-      content: 'Chuyền thức ăn từ đũa này sang đũa khác bị cấm trong văn hóa Nhật Bản vì nó giống với nghi lễ tang lễ. Hành động này được coi là không tôn trọng, vì vậy người Nhật thường tránh làm trong bữa ăn.'
+      content:
+        "Chuyền thức ăn từ đũa này sang đũa khác bị cấm trong văn hóa Nhật Bản vì nó giống với nghi lễ tang lễ. Hành động này được coi là không tôn trọng, vì vậy người Nhật thường tránh làm trong bữa ăn.",
     },
     level: QuestionLevel.NORMAL,
     position: QuestionPosition[17],
@@ -330,7 +329,7 @@ Cậu nhỏ trong bài thơ này là ai?
   // Q10
   {
     question:
-      'Nobita và Doraemon sử dụng cỗ máy thời gian để tới thăm Sewashi. Nhưng cỗ máy bị hỏng đã dẫn cả hai tới một địa điểm kì lạ. Theo bạn, nobi và dora đã bị đưa đến thời kì nào?',
+      "Nobita và Doraemon sử dụng cỗ máy thời gian để tới thăm Sewashi. Nhưng cỗ máy bị hỏng đã dẫn cả hai tới một địa điểm kì lạ. Theo bạn, nobi và dora đã bị đưa đến thời kì nào?",
     image: "images/questions/q11.jpg",
     answers: [
       {
@@ -361,7 +360,7 @@ Cậu nhỏ trong bài thơ này là ai?
   // Q11
   {
     question: "Bản manga Doraemon được viết bằng những bộ chữ cái nào?",
-    image: 'images/questions/q12.jpg',
+    image: "images/questions/q12.jpg",
     answers: [
       {
         content: "Furigana và Hangul",
@@ -390,11 +389,10 @@ Cậu nhỏ trong bài thơ này là ai?
   },
   // Q12
   {
-    question:
-`Hội bạn của Nobita đang lên kế hoạch cho một buổi picnic thật vui vẻ. Tuy nhiên, nobita không biết khi nào là thời điểm thích hợp để hoa đào nở rộ.
+    question: `Hội bạn của Nobita đang lên kế hoạch cho một buổi picnic thật vui vẻ. Tuy nhiên, nobita không biết khi nào là thời điểm thích hợp để hoa đào nở rộ.
  Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
 `,
-    image: 'images/questions/q13.jpg',
+    image: "images/questions/q13.jpg",
     answers: [
       {
         content: "Từ tháng 12-tháng 2",
@@ -423,8 +421,9 @@ Cậu nhỏ trong bài thơ này là ai?
   },
   // Q13
   {
-    question: "Nhóm bạn của Nôbita đang thi xem ai là người có thể quỳ gối trên chiếc tatami lâu nhất. Ở Nhật bản, đây là kiểu ngồi truyền thống của người Nhật Bản và thể hiện đức tính…?",
-    image: 'images/questions/q14.jpg',
+    question:
+      "Nhóm bạn của Nôbita đang thi xem ai là người có thể quỳ gối trên chiếc tatami lâu nhất. Ở Nhật bản, đây là kiểu ngồi truyền thống của người Nhật Bản và thể hiện đức tính…?",
+    image: "images/questions/q14.jpg",
     answers: [
       {
         content: "Cần cù, chịu khó",
@@ -488,7 +487,8 @@ Cậu nhỏ trong bài thơ này là ai?
   },
   // Q15
   {
-    question: "Đây là trò chơi thẻ bài nổi tiếng ở xứ sở hoa anh đào. Bạn có biết tên của trò chơi này là gì không?",
+    question:
+      "Đây là trò chơi thẻ bài nổi tiếng ở xứ sở hoa anh đào. Bạn có biết tên của trò chơi này là gì không?",
     image: "images/questions/q16.jpg",
     answers: [
       {
@@ -514,14 +514,16 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.D,
     explaination: {
-      content: 'Karuta – Trò chơi thẻ bài truyền thống của Nhật Bản, thường được chơi vào dịp năm mới, liên quan đến việc đọc thơ và tìm thẻ tương ứng.'
+      content:
+        "Karuta – Trò chơi thẻ bài truyền thống của Nhật Bản, thường được chơi vào dịp năm mới, liên quan đến việc đọc thơ và tìm thẻ tương ứng.",
     },
     level: QuestionLevel.HARD,
     position: QuestionPosition[14],
   },
   // Q16
   {
-    question: "Một trận đấu cờ đã nổ ra giữa Nôbita và suneo, với Nôbita là quân trắng còn suneo là quân đen. Đây là cờ gì?",
+    question:
+      "Một trận đấu cờ đã nổ ra giữa Nôbita và suneo, với Nôbita là quân trắng còn suneo là quân đen. Đây là cờ gì?",
     image: "images/questions/q18.jpg",
     answers: [
       {
@@ -551,7 +553,8 @@ Cậu nhỏ trong bài thơ này là ai?
   },
   // Q17
   {
-    question: "Đây là một loại hình nghệ thuật ở Nhật Bản. Tên gọi của nó là gì?",
+    question:
+      "Đây là một loại hình nghệ thuật ở Nhật Bản. Tên gọi của nó là gì?",
     image: "images/questions/q19.jpg",
     answers: [
       {
@@ -577,21 +580,19 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.A,
     explaination: {
-      content: 
-`
+      content: `
       Ikebana – Nghệ thuật cắm hoa truyền thống Nhật Bản, thể hiện sự hài hòa giữa con người và thiên nhiên.
       Kabuki – Kịch truyền thống với diễn viên hóa trang cầu kỳ.
       Hanami – Hoạt động ngắm hoa anh đào.
       Shodo – Nghệ thuật viết thư pháp bằng bút lông.
-`
+`,
     },
     level: QuestionLevel.HARD,
     position: QuestionPosition[18],
   },
   // Q18
   {
-        question:
-      "Lần đầu tiên Doraemon xuất hiện, chú có màu gì?",
+    question: "Lần đầu tiên Doraemon xuất hiện, chú có màu gì?",
     answers: [
       {
         content: "Xanh dương",
@@ -616,8 +617,9 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.C,
     explaination: {
-      image: 'images/questions/q6_1.jpg',
-      content: ' Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.'
+      image: "images/questions/q6_1.jpg",
+      content:
+        ' Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.',
     },
     level: QuestionLevel.EASY,
     position: QuestionPosition[13],
@@ -656,20 +658,23 @@ Cậu nhỏ trong bài thơ này là ai?
   {
     question:
       "Nhà của Nobita trong Doraemon có một số đặc điểm nổi bật mang đậm dấu ấn văn hóa Nhật Bản. Nhà của cậu thuộc kiểu nhà nào trong xã hội Nhật Bản?",
-      image: "images/questions/q20.jpg",
+    image: "images/questions/q20.jpg",
     answers: [
       {
-        content: "Nhà có không gian mở, với phòng tatami và cửa sliding kiểu Nhật",
+        content:
+          "Nhà có không gian mở, với phòng tatami và cửa sliding kiểu Nhật",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Nhà có các phòng riêng biệt, được thiết kế theo phong cách phương Tây",
+        content:
+          "Nhà có các phòng riêng biệt, được thiết kế theo phong cách phương Tây",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Nhà được xây dựng theo kiểu kiến trúc hiện đại, đầy đủ công nghệ cao",
+        content:
+          "Nhà được xây dựng theo kiểu kiến trúc hiện đại, đầy đủ công nghệ cao",
         value: AnswerKeyValue.C,
         key: "C",
       },
