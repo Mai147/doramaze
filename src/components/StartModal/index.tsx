@@ -75,7 +75,7 @@ const StartModal: React.FC<StartModalProps> = ({ handleStart }) => {
   return (
     <Modal isOpen={true} closeOnOverlay={false} opacity={0.9}>
       <ModalContainer
-        className="flex flex-col items-center text-xl"
+        className="flex flex-col items-center text-3xl"
         style={{
           width: START_MODAL_WIDTH,
           height: START_MODAL_HEIGHT,
@@ -88,7 +88,7 @@ const StartModal: React.FC<StartModalProps> = ({ handleStart }) => {
           alt="nobita"
         />
         <div
-          className="flex-1 flex flex-col items-center text-center text-gray-700"
+          className="flex-1 flex flex-col items-center text-center text-gray-700 font-bold"
           style={{
             maxWidth: START_MODAL_TEXT_MAX_WIDTH,
             fontSize: START_MODAL_CONTENT_TEXT_SIZE,

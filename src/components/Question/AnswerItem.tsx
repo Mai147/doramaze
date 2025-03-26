@@ -91,15 +91,15 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   };
   return (
     <div
-      className={`border-4 border-[#9E7D20] py-3 pl-8 pr-4 ${getBackground()} relative transition-all duration-500`}
+      className={`border-4 border-[#9E7D20] py-3 pl-12 pr-4 ${getBackground()} relative transition-all duration-500`}
       style={{ boxShadow: "inset 1px 1px 2px 2px #8C946F" }}
       onClick={handleSelectAnswer}
       ref={answerRef}
     >
-      <div className="w-6 h-6 text-xs bg-[#996029] text-white flex justify-center items-center absolute top-0 left-0">
+      <div className="w-10 h-10 text-2xl font-bold bg-[#996029] text-white flex justify-center items-center absolute top-0 left-0">
         {answer.key}
       </div>
-      <span>{answer.content}</span>
+      <span className="text-2xl font-bold">{answer.content}</span>
       <AnswerConfirmModal
         isOpen={isOpenConfirmModal}
         answer={answer}

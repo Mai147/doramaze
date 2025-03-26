@@ -24,8 +24,13 @@ const ExplainationModal: React.FC<ExplainationModalProps> = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalContainer
-        className="flex flex-col items-center max-w-[70vw] text-2xl"
-        style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+        className="flex flex-col items-center max-w-[90vw] max-h-[90vh] text-3xl"
+        style={{
+          paddingLeft: "3rem",
+          paddingRight: "3rem",
+          paddingTop: "3rem",
+          paddingBottom: "3rem",
+        }}
       >
         <img width={80} src="images/end.png" alt="doremon" />
         {!imagesPreloaded ? (
@@ -34,7 +39,7 @@ const ExplainationModal: React.FC<ExplainationModalProps> = ({
           </div>
         ) : (
           <>
-            <p className="whitespace-break-spaces mt-2">
+            <p className="whitespace-break-spaces mt-2 font-bold text-center">
               {explaination.content}
             </p>
             {explaination.image && (

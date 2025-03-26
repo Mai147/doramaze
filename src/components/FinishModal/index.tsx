@@ -30,13 +30,13 @@ const FinishModal: React.FC<FinishModalProps> = ({
           />
         )}
         {type && (
-          <span className="text-2xl my-4">
+          <span className="text-3xl font-bold my-4">
             {(type as FinishState) === FinishState.WIN
               ? "Chúc mừng bạn đã giúp Nobita tìm ra lối thoát thành công!!!"
               : "Bạn đã không thể giúp Nobita tìm ra lối thoát!!!"}
           </span>
         )}
-        <Button className="w-full" onClick={onRestart}>
+        <Button size="lg" className="w-full" onClick={onRestart}>
           Bắt đầu lại
         </Button>
       </ModalContainer>

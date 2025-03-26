@@ -47,7 +47,7 @@ const QuestionModal: React.FC<QuestionModalProps> = ({
   }, [question.video, isOpen, pauseAllAudio]);
   return (
     <Modal isOpen={isOpen} opacity={0.8} closeOnOverlay={false}>
-      <ModalContainer className="min-w-[40vw] max-w-[60vw] max-h-[80vh] overflow-auto relative">
+      <ModalContainer className="min-w-[40vw] max-w-[80vw] max-h-[90vh] overflow-auto relative">
         <div className="flex justify-center mb-4">
           <img width={60} src="images/front3.gif" alt="nobita" />
         </div>
