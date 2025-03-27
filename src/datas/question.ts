@@ -130,7 +130,8 @@ export const QuestionData: Question[] = [
 Đồ chơi mới nhất mang sang mọi người.
 Hùa theo "anh lớn" đôi lời,
 Gặp nguy lại núp, khóc rồi cầu xin.
-Dù tinh ranh, lắm chuyện phiền, Nhưng cậu chẳng thiếu bạn hiền kề bên.
+Dù tinh ranh, lắm chuyện phiền,
+Nhưng cậu chẳng thiếu bạn hiền kề bên.
 
 Cậu nhỏ trong bài thơ này là ai?
 `,
