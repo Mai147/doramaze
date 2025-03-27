@@ -24,7 +24,7 @@ const ExplainationModal: React.FC<ExplainationModalProps> = ({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalContainer
-        className="flex flex-col items-center max-w-[90vw] max-h-[90vh] text-3xl"
+        className="flex flex-col items-center max-w-[80vw] max-h-[90vh] text-3xl"
         style={{
           paddingLeft: "3rem",
           paddingRight: "3rem",
@@ -39,7 +39,7 @@ const ExplainationModal: React.FC<ExplainationModalProps> = ({
           </div>
         ) : (
           <>
-            <p className="whitespace-break-spaces mt-2 font-bold text-center">
+            <p className="whitespace-break-spaces mt-2 font-bold">
               {explaination.content}
             </p>
             {explaination.image && (

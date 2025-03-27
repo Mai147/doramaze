@@ -59,7 +59,7 @@ export const QuestionData: Question[] = [
     level: QuestionLevel.HARD,
     position: QuestionPosition[4],
     explaination: {
-      content: `Shirakawa-go là ngôi làng cổ ở tỉnh Gifu, Nhật Bản, nổi tiếng với những ngôi nhà mái tranh dốc đứng theo kiến trúc Gassho-zukuri. Được UNESCO công nhận là Di sản Thế giới từ năm 1995, làng Shirakawa-go mang vẻ đẹp tuyệt vời suốt các mùa: tuyết phủ trắng vào mùa đông, sắc xanh tươi mát vào mùa xuân hè, và lá đỏ rực rỡ vào mùa thu. Đây là biểu tượng của sự hòa hợp giữa con người và thiên nhiên, là điểm đến lý tưởng để trải nghiệm vẻ đẹp truyền thống yên bình của Nhật Bản.`,
+      content: `Shirakawa-go là ngôi làng cổ ở tỉnh Gifu, Nhật Bản, nổi tiếng với nhà Gassho-zukuri mái tranh dốc đứng. Được UNESCO công nhận là Di sản Thế giới, làng mang vẻ đẹp yên bình suốt bốn mùa, thu hút du khách muốn khám phá văn hóa truyền thống Nhật Bản.`,
       image: "images/questions/q1_1.jpg",
     },
   },
@@ -126,9 +126,9 @@ export const QuestionData: Question[] = [
   },
   // Q4
   {
-    question: `Cậu nhỏ luôn thích khoe khoang, 
-Đồ chơi mới nhất mang sang mọi người. 
-Hùa theo "anh lớn" đôi lời, 
+    question: `Cậu nhỏ luôn thích khoe khoang,
+Đồ chơi mới nhất mang sang mọi người.
+Hùa theo "anh lớn" đôi lời,
 Gặp nguy lại núp, khóc rồi cầu xin.
 Dù tinh ranh, lắm chuyện phiền, Nhưng cậu chẳng thiếu bạn hiền kề bên.
 
@@ -176,7 +176,7 @@ Cậu nhỏ trong bài thơ này là ai?
         key: "B",
       },
       {
-        content: "Phía Đông của châu Á, gần Thái Bình Dương",
+        content: "Phía Đông của châu Á",
         value: AnswerKeyValue.C,
         key: "C",
       },
@@ -363,22 +363,22 @@ Cậu nhỏ trong bài thơ này là ai?
     image: "images/questions/q12.jpg",
     answers: [
       {
-        content: "Furigana và Hangul",
+        content: "FURIGANA và HANGUL",
         value: AnswerKeyValue.A,
         key: "A",
       },
       {
-        content: "Nihongo và Romaji",
+        content: "NIHONGO và ROMAJI",
         value: AnswerKeyValue.B,
         key: "B",
       },
       {
-        content: "Kana, Latinh, Furigana",
+        content: "KANA, LATINH, FURIGANA",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Kanji, hiragana, katakana",
+        content: "KANJI, HIRAGANA, KATAKANA",
         value: AnswerKeyValue.D,
         key: "D",
       },
@@ -390,7 +390,7 @@ Cậu nhỏ trong bài thơ này là ai?
   // Q12
   {
     question: `Hội bạn của Nobita đang lên kế hoạch cho một buổi picnic thật vui vẻ. Tuy nhiên, nobita không biết khi nào là thời điểm thích hợp để hoa đào nở rộ.
- Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
+Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
 `,
     image: "images/questions/q13.jpg",
     answers: [
@@ -581,10 +581,10 @@ Cậu nhỏ trong bài thơ này là ai?
     correctAnswer: AnswerKeyValue.A,
     explaination: {
       content: `
-      Ikebana – Nghệ thuật cắm hoa truyền thống Nhật Bản, thể hiện sự hài hòa giữa con người và thiên nhiên.
-      Kabuki – Kịch truyền thống với diễn viên hóa trang cầu kỳ.
-      Hanami – Hoạt động ngắm hoa anh đào.
-      Shodo – Nghệ thuật viết thư pháp bằng bút lông.
+Ikebana – Nghệ thuật cắm hoa truyền thống Nhật Bản, thể hiện sự hài hòa giữa con người và thiên nhiên.
+Kabuki – Kịch truyền thống với diễn viên hóa trang cầu kỳ.
+Hanami – Hoạt động ngắm hoa anh đào.
+Shodo – Nghệ thuật viết thư pháp bằng bút lông.
 `,
     },
     level: QuestionLevel.HARD,
@@ -619,7 +619,7 @@ Cậu nhỏ trong bài thơ này là ai?
     explaination: {
       image: "images/questions/q6_1.jpg",
       content:
-        ' Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.',
+        'Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.',
     },
     level: QuestionLevel.EASY,
     position: QuestionPosition[13],
