@@ -623,7 +623,7 @@ Shodo – Nghệ thuật viết thư pháp bằng bút lông.
         'Sau khi bị chuột cắn mất tai và bạn gái chia tay, Doraemon quá buồn rầu và đã leo lên đỉnh một ngọn tháp, cậu uống một lọ thuốc có chữ "Nỗi buồn" khiến màu sơn của mình chuyển từ vàng sang xanh.',
     },
     level: QuestionLevel.EASY,
-    position: QuestionPosition[13],
+    position: QuestionPosition[9],
   },
   // Q19
   {
@@ -653,7 +653,7 @@ Shodo – Nghệ thuật viết thư pháp bằng bút lông.
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.MIDDLE,
-    position: QuestionPosition[9],
+    position: QuestionPosition[13],
   },
   // Q20
   {
