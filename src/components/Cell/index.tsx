@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Answer, CellState } from "../../types";
 import QuestionModal from "../Question/QuestionModal";
 import { Question } from "../../datas/question";
-import { CELL_SIZE, CELL_SIZE_UNIT } from "../../configs/size";
+// import { CELL_SIZE, CELL_SIZE_UNIT } from "../../configs/size";
 import ExplainationModal from "../Question/ExplainationModal";
 
 type CellProps = {
@@ -49,8 +49,10 @@ const Cell: React.FC<CellProps> = ({
     <div
       className={`flex items-center justify-center ${getCellColor()}`}
       style={{
-        width: CELL_SIZE + CELL_SIZE_UNIT,
-        height: CELL_SIZE + CELL_SIZE_UNIT,
+        // width: CELL_SIZE + CELL_SIZE_UNIT,
+        // height: CELL_SIZE + CELL_SIZE_UNIT,
+        width: `calc((100vh - 10rem) / 10)`,
+        height: "calc((100vh - 10rem) / 10)",
       }}
     >
       {cellState === CellState.QUESTION && (
