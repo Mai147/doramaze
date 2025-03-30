@@ -11,6 +11,7 @@ import useImagePreloader from "../../hooks/useImagePreloader";
 import Spinner from "../Spinner";
 import useVideoPreloader from "../../hooks/useVideoPreloader";
 import { useAudio } from "../../context/AudioContext";
+import { isApplyCountDown } from "../../configs/board";
 
 type QuestionModalProps = {
   isOpen: boolean;
@@ -57,12 +58,14 @@ const QuestionModal: React.FC<QuestionModalProps> = ({
           </div>
         ) : (
           <>
-            <div className="absolute right-4 top-4">
-              <Countdown
-                time={question.time ?? QuestionTime[question.level]}
-                onEnd={handleEndCountDown}
-              />
-            </div>
+            {isApplyCountDown && (
+              <div className="absolute right-4 top-4">
+                <Countdown
+                  time={question.time ?? QuestionTime[question.level]}
+                  onEnd={handleEndCountDown}
+                />
+              </div>
+            )}
             <QuestionSection question={question.question} />
             {question.image && (
               <div className="flex justify-center mb-4">

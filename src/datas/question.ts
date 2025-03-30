@@ -66,7 +66,7 @@ export const QuestionData: Question[] = [
   // Q2
   {
     question:
-      "Shizuka đang diện đồ để đi lễ hội Bon. Cô bé đã chọn một bộ trang phục truyền thống của nhật bản. Tên gọi của nó là gì?",
+      "Trong lễ hội Bon, Shizuka đã chọn một bộ trang phục truyền thống của Nhật Bản. Tên gọi của nó là gì?",
     image: "images/questions/q2.jpg",
     answers: [
       {
@@ -90,7 +90,13 @@ export const QuestionData: Question[] = [
         key: "D",
       },
     ],
-    correctAnswer: AnswerKeyValue.C,
+    correctAnswer: AnswerKeyValue.A,
+    explaination: {
+      content: `A. Yukata: một loại kimono mùa hè, làm từ vải cotton nhẹ với thiết kế đơn giản, thường được mặc trong các lễ hội như Obon.
+B. Tomesode: một loại kimono trang trọng, thường dành cho phụ nữ đã kết hôn.
+C. Furisode: kimono rất trang trọng, thường mặc trong các dịp đặc biệt như lễ thành nhân 
+D. Houmongi: kimono bán trang trọng, thường dành cho phụ nữ trong các sự kiện xã hội.`,
+    },
     level: QuestionLevel.MIDDLE,
     position: QuestionPosition[7],
   },
@@ -105,7 +111,7 @@ export const QuestionData: Question[] = [
         key: "A",
       },
       {
-        content: "Bóng bầu dục",
+        content: "Bóng ném",
         value: AnswerKeyValue.B,
         key: "B",
       },
@@ -159,7 +165,7 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.B,
     level: QuestionLevel.EASY,
-    position: QuestionPosition[10],
+    position: QuestionPosition[0],
   },
   // Q5
   {
@@ -189,7 +195,7 @@ Cậu nhỏ trong bài thơ này là ai?
     ],
     correctAnswer: AnswerKeyValue.C,
     level: QuestionLevel.NORMAL,
-    position: QuestionPosition[0],
+    position: QuestionPosition[10],
   },
   // Q6
   {
@@ -229,7 +235,7 @@ Cậu nhỏ trong bài thơ này là ai?
     image: "images/questions/q8.jpg",
     answers: [
       {
-        content: "Nagashi somen",
+        content: "Nagashi Somen",
         value: AnswerKeyValue.A,
         key: "A",
       },
@@ -239,19 +245,19 @@ Cậu nhỏ trong bài thơ này là ai?
         key: "B",
       },
       {
-        content: "Bánh trôi nước",
+        content: "Bánh Mochi",
         value: AnswerKeyValue.C,
         key: "C",
       },
       {
-        content: "Mì Udon",
+        content: "Udon",
         value: AnswerKeyValue.D,
         key: "D",
       },
     ],
     correctAnswer: AnswerKeyValue.A,
     explaination: {
-      content: "Nagashi somen còn được gọi là bún trôi ống tre =))",
+      content: "Nagashi Somen còn được gọi là bún trôi ống tre =))",
     },
     level: QuestionLevel.MIDDLE,
     position: QuestionPosition[11],
@@ -355,6 +361,10 @@ Cậu nhỏ trong bài thơ này là ai?
       },
     ],
     correctAnswer: AnswerKeyValue.C,
+    explaination: {
+      content: `Nhân vật nữ mặc Kimono với Obi (đai lưng rộng), kiểu dáng và cách buộc Obi là đặc trưng của thời Edo.
+Nhân vật nam bên phải mặc Kimono với Hakama (quần rộng) và mang kiếm, đây là một Samurai – tầng lớp đặc trưng của thời Edo.`,
+    },
     level: QuestionLevel.HARD,
     position: QuestionPosition[15],
   },
@@ -423,7 +433,7 @@ Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
   // Q13
   {
     question:
-      "Nhóm bạn của Nôbita đang thi xem ai là người có thể quỳ gối trên chiếc tatami lâu nhất. Ở Nhật bản, đây là kiểu ngồi truyền thống của người Nhật Bản và thể hiện đức tính…?",
+      "Nhóm bạn của Nôbita đang thi xem ai là người có thể quỳ gối trên chiếc tatami lâu nhất. Ở Nhật bản, đây là kiểu ngồi truyền thống của người Nhật Bản và thể hiện đức tính nào?",
     image: "images/questions/q14.jpg",
     answers: [
       {
@@ -515,8 +525,10 @@ Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
     ],
     correctAnswer: AnswerKeyValue.D,
     explaination: {
-      content:
-        "Karuta – Trò chơi thẻ bài truyền thống của Nhật Bản, thường được chơi vào dịp năm mới, liên quan đến việc đọc thơ và tìm thẻ tương ứng.",
+      content: `Bộ bài giáo dục kết hợp giữa thơ ca và từ vựng tiếng Nhật.
+Có nhiều loại như Uta-garuta (bài thơ cổ Nhật Bản), Iroha-karuta (chơi với chữ cái tiếng Nhật).
+Người đọc lên một câu thơ hoặc chữ cái, người chơi phải nhanh chóng tìm lá bài phù hợp.
+`,
     },
     level: QuestionLevel.HARD,
     position: QuestionPosition[14],
@@ -533,7 +545,7 @@ Theo bạn, đâu là khoảng thời gian phù hợp để tổ chức picnic:
         key: "A",
       },
       {
-        content: "Ô ăn quan",
+        content: "Cờ shogi",
         value: AnswerKeyValue.B,
         key: "B",
       },
@@ -593,7 +605,8 @@ Shodo – Nghệ thuật viết thư pháp bằng bút lông.
   },
   // Q18
   {
-    question: "Lần đầu tiên Doraemon xuất hiện, chú có màu gì?",
+    question:
+      "Theo cốt truyện chính thức, lần đầu tiên Doraemon đc sản xuất ra có màu gì?",
     answers: [
       {
         content: "Xanh dương",

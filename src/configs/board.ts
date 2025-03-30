@@ -147,3 +147,5 @@ const getQuestionPosition = () => {
 };
 
 export const QuestionPosition = getQuestionPosition();
+
+export const isApplyCountDown = false;
